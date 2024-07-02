@@ -218,10 +218,19 @@
                                   document.querySelectorAll('.mil-button').forEach(function(button) {
                                       button.addEventListener('click', function(event) {
                                           event.preventDefault(); // Previene la acción por defecto del enlace
-                                          window.location.replace(button.href); // Redirige sin mantener el historial de navegación
+                                          setTimeout(() => {
+                                            window.location.href = button.href; // Redirige después de un pequeño retraso
+                                          }, 100); // Ajusta el retraso según sea necesario
                                       });
                                   });
                                 </script>
+                                
+                                <style>
+                                  .mil-button {
+                                      pointer-events: auto; /* Asegúrate de que los enlaces sean clicables */
+                                  }
+                                </style>
+                                
                                 
                                 <style>
                                   .mil-button {
