@@ -210,19 +210,17 @@
                                     </div>
                                 </div>
 
-                                <a href="https://www.eventbrite.com.mx/e/mkt-health-tickets-929385074777?aff=oddtdtcreator" class="mil-button mil-arrow-place mil-btn-space">
+                                <a href="https://www.eventbrite.com.mx/e/mkt-health-tickets-929385074777?aff=oddtdtcreator" class="mil-button mil-arrow-place mil-btn-space" target="_blank">
                                     <span>RESERVA TU LUGAR</span>
                                 </a>
                                 
                                 <script>
-                                  document.querySelectorAll('.mil-button').forEach(function(button) {
-                                      button.addEventListener('click', function(event) {
-                                          event.preventDefault(); // Previene la acción por defecto del enlace
-                                          setTimeout(() => {
-                                            window.location.href = button.href; // Redirige después de un pequeño retraso
-                                          }, 100); // Ajusta el retraso según sea necesario
-                                      });
-                                  });
+                                    document.querySelectorAll('.mil-button, .image-link').forEach(function(link) {
+                                        link.addEventListener('click', function(event) {
+                                            event.preventDefault(); // Previene la acción por defecto del enlace
+                                            window.open(link.href, '_blank'); // Abre el enlace en una nueva pestaña
+                                        });
+                                    });
                                 </script>
                                 
                                 <style>
@@ -232,11 +230,8 @@
                                 </style>
                                 
                                 
-                                <style>
-                                  .mil-button {
-                                      pointer-events: auto; /* Asegúrate de que los enlaces sean clicables */
-                                  }
-                                </style>
+                                
+                        
                                              
 
                                 <div class="mil-circle-text">
