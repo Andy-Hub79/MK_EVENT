@@ -21,10 +21,22 @@ $(function () {
     const options = {
         containers: ['#swupMain', '#swupMenu'],
         animateHistoryBrowsing: true,
-        linkSelector: 'a:not([data-no-swup])',
+        linkSelector: 'a:not([data-no-swup])', // Excluir enlaces con data-no-swup
         animationSelector: '[class="mil-main-transition"]'
     };
     const swup = new Swup(options);
+
+    // Código para manejar los enlaces con data-no-swup
+    document.querySelectorAll('a[data-no-swup]').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.stopImmediatePropagation(); // Prevenir que Swup maneje el evento
+            if (link.target === '_blank') {
+                window.open(link.href, '_blank');
+            } else {
+                window.location.replace(link.href); // Redirige sin mantener el historial de navegación
+            }
+        });
+    });
 
     /***************************
 
