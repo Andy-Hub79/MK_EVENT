@@ -369,17 +369,17 @@
                                     <p class="mil-up mil-mb-60">Estos ponentes, con su vasta experiencia y conocimiento, proporcionarán a los asistentes herramientas prácticas y estrategias innovadoras para enfrentar los desafíos del marketing en el sector salud. La participación en sus sesiones será una oportunidad única para aprender de los mejores y aplicar estas lecciones en sus propias organizaciones.</p>
 
                                     
-                                    <a href="https://www.eventbrite.com.mx/e/mkt-health-tickets-929385074777?aff=oddtdtcreator" class="mil-button mil-arrow-place mil-btn-space">
+                                    <a href="https://www.eventbrite.com.mx/e/mkt-health-tickets-929385074777?aff=oddtdtcreator" class="mil-button mil-arrow-place mil-btn-space" target="_blank">
                                         <span>RESERVA TU LUGAR</span>
                                     </a>
                                     
                                     <script>
-                                      document.querySelectorAll('.mil-button').forEach(function(button) {
-                                          button.addEventListener('click', function(event) {
-                                              event.preventDefault(); // Previene la acción por defecto del enlace
-                                              window.location.replace(button.href); // Redirige sin mantener el historial de navegación
-                                          });
-                                      });
+                                        document.querySelectorAll('.mil-button, .image-link').forEach(function(link) {
+                                            link.addEventListener('click', function(event) {
+                                                event.preventDefault(); // Previene la acción por defecto del enlace
+                                                window.open(link.href, '_blank'); // Abre el enlace en una nueva pestaña
+                                            });
+                                        });
                                     </script>
                                     
                                     <style>
@@ -626,18 +626,26 @@
 
                                     <p class="mil-light-soft mil-up mil-mb-30"><b>POWERED BY</b></p>
                                    
-                                    <a href="https://dineroynegocios.mx/" class="image-link">
+                                    <a href="https://dineroynegocios.mx/" class="image-link" target="_blank">
                                         <img src="./img/icons/D&N_BW.png" alt="" class="mk-experts">
                                     </a>
-                                      
+                                    
                                     <script>
-                                      document.querySelectorAll('.image-link').forEach(function(button) {
-                                          button.addEventListener('click', function(event) {
-                                              event.preventDefault(); // Previene la acción por defecto del enlace
-                                              window.location.replace(button.href); // Redirige sin mantener el historial de navegación
-                                          });
-                                      });
+                                        document.querySelectorAll('.mil-button, .image-link').forEach(function(link) {
+                                            link.addEventListener('click', function(event) {
+                                                event.preventDefault(); // Previene la acción por defecto del enlace
+                                                window.open(link.href, '_blank'); // Abre el enlace en una nueva pestaña
+                                            });
+                                        });
                                     </script>
+                                    
+                                    <style>
+                                      .mil-button, .image-link {
+                                          pointer-events: auto; /* Asegúrate de que los enlaces sean clicables */
+                                      }
+                                    </style>
+                                    
+                                      
                                     
                                 </div>
                                 <div class="col-md-7 col-lg-6">
